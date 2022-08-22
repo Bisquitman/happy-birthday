@@ -98,11 +98,11 @@ a {
   font-size: 18px;
   color: #ffffff;
   margin-right: 30px;
-  transition: background-color 0.2s ease-in-out;
+  transition: box-shadow 0.3s;
 }
 
 .header__button-change:hover {
-  background-color: #1178b2;
+  box-shadow: 0 14px 30px -15px rgb(0 0 0 / 75%);
 }
 
 .header__button-change:last-child {
@@ -205,8 +205,27 @@ a {
   margin-bottom: 0;
 }
 
-.copyright__list a:hover {
-  color: #5273c8;
+.copyright__link {
+  display: inline-block;
+  position: relative;
+}
+
+.copyright__link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s;
+}
+
+.copyright__link:hover::after {
+  transform-origin: bottom left;
+  transform: scaleX(1);
 }
 
 .social__list {
