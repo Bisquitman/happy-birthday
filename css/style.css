@@ -4,6 +4,7 @@
   src: url('../assets/fonts/bad-script-v16-latin_cyrillic-regular.woff2') format('woff2'), url('../assets/fonts/bad-script-v16-latin_cyrillic-regular.woff') format('woff');
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
@@ -11,6 +12,7 @@
   src: url('../assets/fonts/open-sans-v29-latin_cyrillic-regular.woff2') format('woff2'), url('../assets/fonts/open-sans-v29-latin_cyrillic-regular.woff') format('woff');
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
@@ -18,6 +20,7 @@
   src: url('../assets/fonts/open-sans-v29-latin_cyrillic-700.woff2') format('woff2'), url('../assets/fonts/open-sans-v29-latin_cyrillic-700.woff') format('woff');
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
 }
 /* ======== Fonts ======== */
 
@@ -35,9 +38,16 @@ body {
   display: flex;
   flex-direction: column;
   font-family: 'Open Sans';
-  background-color: #fff1f8;
   height: 100vh;
   padding-bottom: 17px;
+}
+
+.women {
+  background-color: #fff1f8;
+}
+
+.men {
+  background-color: #eff9fe;
 }
 
 button {
@@ -91,22 +101,34 @@ a {
 .header__button-change {
   width: 300px;
   height: 65px;
-  background-color: #c300c7;
   border-radius: 30px;
   border: none;
   font-weight: 700;
   font-size: 18px;
   color: #ffffff;
   margin-right: 30px;
-  transition: box-shadow 0.3s;
+  transition: background-color 0.3s;
 }
-
+/* 
 .header__button-change:hover {
   box-shadow: 0 14px 30px -15px rgb(0 0 0 / 75%);
-}
+} */
 
 .header__button-change:last-child {
   margin-right: 0;
+}
+
+.women .header__button-change {
+  background-color: #c300c7;
+}
+.men .header__button-change {
+  background-color: #1178b2;
+}
+.women .header__button-change:hover {
+  background-color: #1178b2;
+}
+.men .header__button-change:hover {
+  background-color: #c300c7;
 }
 
 .header__button-gender {
@@ -135,12 +157,12 @@ a {
   background-image: url('../img/women.svg');
 }
 
-.header__button-gender_men_active,
+.men .header__button-gender_men,
 .header__button-gender_men:hover {
   border: 1px solid #1178b2;
 }
 
-.header__button-gender_women_active,
+.women .header__button-gender_women,
 .header__button-gender_women:hover {
   border: 1px solid #c300c7;
 }
@@ -152,7 +174,7 @@ a {
   display: flex;
   align-items: center;
   flex-grow: 1;
-  padding: 32px 0;
+  padding: 15px 0;
 }
 
 .card__container {
@@ -173,16 +195,29 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
 
-  font-family: 'Bad Script';
-  font-style: italic;
   font-weight: 400;
-  font-size: max(3em, min(calc(100vw * 3 / (840 / 3 / 2)), 6em));
+  font-size: max(3em, min(calc((100vw * 3) / (840 / 3 / 2)), 6em));
   line-height: calc(35 / 18);
   color: #000;
 }
+
+.women .card__text {
+  font-family: 'Bad Script';
+  font-style: italic;
+}
+
+.men .card__text {
+  font-family: 'Open Sans';
+  font-weight: 700;
+}
+
 /* ======== Card ======== */
 
 /* ======== Footer ======== */
+
+.footer {
+  padding: 17px 0;
+}
 
 .footer__container {
   display: flex;
@@ -234,12 +269,20 @@ a {
   gap: 16px;
 }
 
-.social__link {
+.men .social__link {
   color: #5273c8;
 }
 
-.social__link:hover {
+.women .social__link {
   color: #c300c7;
+}
+
+.men .social__link:hover {
+  color: #c300c7;
+}
+
+.women .social__link:hover {
+  color: #5273c8;
 }
 
 /* ======== Footer ======== */
@@ -271,6 +314,17 @@ a {
     height: 40px;
     background-size: 30px;
     margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer__container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .copyright {
+    order: 1;
   }
 }
 

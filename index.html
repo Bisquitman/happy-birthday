@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Happy Birthday - Сервис для создания открыток</title>
 
+    <link rel="preload" href="./assets/fonts/bad-script-v16-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="./assets/fonts/open-sans-v29-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="./assets/fonts/open-sans-v29-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin />
+
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicons/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicons/favicon-16x16.png" />
@@ -13,8 +17,10 @@
 
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/style.css" />
+
+    <script src="./js/scripts.js" defer></script>
   </head>
-  <body>
+  <body class="women">
     <header class="header">
       <div class="container header__container">
         <div class="header__button-wrapper">
@@ -23,7 +29,7 @@
         </div>
         <div class="header__button-wrapper">
           <button class="header__button-gender header__button-gender_men" aria-label="поменять на мужские открытки"></button>
-          <button class="header__button-gender header__button-gender_women header__button-gender_women_active" aria-label="поменять на женские открытки"></button>
+          <button class="header__button-gender header__button-gender_women" aria-label="поменять на женские открытки"></button>
         </div>
       </div>
     </header>
@@ -31,7 +37,7 @@
     <main class="card">
       <div class="container card__container">
         <div class="card__wrapper">
-          <img src="./img/card-w-01.jpg" alt="" class="card__image" />
+          <img src="./img/card-w-01.jpg" alt="" class="card__image" width="840" height="520" />
           <p class="card__text">
             Поздравляю с днем рожденья!<br />
             Пусть будет жизнь полна веселья,<br />
@@ -49,7 +55,7 @@
 
     <footer class="footer">
       <div class="container footer__container">
-        <div class="copyright">
+        <div class="copyright footer__copyright">
           <ul class="copyright__list">
             <li class="copyright__item">
               Design: <span><a class="copyright__link" href="https://t.me/@Mrshmallowww">Anastasia Ilina</a></span>
@@ -60,7 +66,7 @@
             <li class="copyright__item">&copy;&nbsp;HBCard, 2022</li>
           </ul>
         </div>
-        <div class="social">
+        <div class="social footer__social">
           <ul class="social__list">
             <li class="social__item">
               <a href="https://vk.com" class="social__link">
