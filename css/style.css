@@ -114,6 +114,14 @@ a {
   margin-right: 0;
 }
 
+.header__button-change:active {
+  opacity: 0.6;
+}
+
+.header__button-change:focus {
+  border: 1px solid #000;
+}
+
 .women .header__button-change {
   background-color: #c300c7;
 }
@@ -146,8 +154,20 @@ a {
   margin-right: 0;
 }
 
+.header__button-gender:active {
+  opacity: 0.6;
+}
+
 .header__button-gender_men {
   background-image: url('../img/men.svg');
+}
+
+.header__button-gender_men:focus {
+  border: 1px solid #1178b2;
+}
+
+.header__button-gender_women:focus {
+  border: 1px solid #c300c7;
 }
 
 .header__button-gender_women {
@@ -263,6 +283,25 @@ a {
   display: flex;
   align-items: center;
   gap: 16px;
+}
+
+.social__item {
+  line-height: 0;
+}
+
+.social__link {
+  display: inline-block;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+}
+
+.social__link:focus {
+  outline: 1px solid black;
+}
+
+.social__link:active {
+  opacity: 0.6;
 }
 
 .men .social__link {
