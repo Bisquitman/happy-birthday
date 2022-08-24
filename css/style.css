@@ -120,6 +120,7 @@ a {
 .men .header__button-change {
   background-color: #1178b2;
 }
+
 .women .header__button-change:hover {
   background-color: #1178b2;
 }
@@ -199,7 +200,6 @@ a {
 
 .women .card__text {
   font-family: 'Bad Script';
-  font-style: italic;
 }
 
 .men .card__text {
