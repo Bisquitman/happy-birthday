@@ -96,3 +96,13 @@ saveBtn.addEventListener('click', (e) => {
   e.preventDefault(); // prevent
   exportimage();
 });
+
+// Сохранение картинки с текстом, другой способ
+const cardWrapper = document.querySelector('.card__wrapper');
+
+cardWrapper.addEventListener('dblclick', () => {
+  const newWindow = window.open('', '', `width=840,height=520,top=${screen.height / 2 - 520 / 2},left=${screen.width / 2 - 840 / 2}`);
+  html2canvas(cardWrapper).then((canvas) => {
+    (canvas.style.maxWidth = '100%'), (canvas.style.height = 'auto'), newWindow.document.body.prepend(canvas);
+  });
+});
