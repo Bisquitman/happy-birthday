@@ -196,6 +196,8 @@ a {
 
 .card__container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card__wrapper {
@@ -225,6 +227,11 @@ a {
 .men .card__text {
   font-family: 'Open Sans';
   font-weight: 700;
+}
+
+.card__save-btn {
+  margin-top: 5px;
+  padding: 10px;
 }
 
 /* ======== Card ======== */

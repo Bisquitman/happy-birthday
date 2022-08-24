@@ -81,3 +81,18 @@ btnText.addEventListener('click', changeText);
 btnImg.addEventListener('click', changeImage);
 
 getDataToCard();
+
+// Сохранение картинки с текстом
+function exportimage() {
+  html2canvas(document.querySelector('.card__wrapper')).then((canvas) => {
+    canvas.toBlob((blob) => {
+      saveAs(blob, `${state.photo}`);
+    });
+  });
+}
+
+const saveBtn = document.querySelector('.card__save-btn');
+saveBtn.addEventListener('click', (e) => {
+  e.preventDefault(); // prevent
+  exportimage();
+});
