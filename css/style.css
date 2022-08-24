@@ -147,7 +147,7 @@ a {
   background-position: center center;
   background-size: 36px;
   margin-right: 20px;
-  transition: all 0.3s ease-in-out;
+  transition: border 0.3s ease-in-out;
 }
 
 .header__button-gender:last-child {
