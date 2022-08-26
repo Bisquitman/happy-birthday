@@ -230,8 +230,51 @@ a {
 }
 
 .card__save-btn {
+  position: relative;
   margin-top: 5px;
   padding: 10px;
+  transition: color .3s ease;
+  font-weight: 700;
+}
+
+.men .card__save-btn {
+  color: #1178b2;
+}
+
+.women .card__save-btn {
+  color: #c300c7;
+}
+
+.card__save-btn:hover {
+  color: #fff;
+}
+
+.card__save-btn::before {  
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+.card__save-btn:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.card__save-btn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  z-index: -1;
+  transition: transform .3s ease;
+}
+
+.women .card__save-btn::before {
+  background-color: #c300c7;
+}
+
+.men .card__save-btn::before {
+  background-color: #1178b2;
 }
 
 /* ======== Card ======== */
