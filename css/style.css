@@ -342,10 +342,30 @@ a {
 }
 
 .social__link {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   border-radius: 50%;
   width: 36px;
   height: 36px;
+  transition: all 0.5s;
+}
+
+.social__link span {
+  width: 0px;
+  height: 36px;
+  overflow: hidden;
+  transition: width 1s;
+  text-align: center;
+}
+
+.social__link:hover {
+  width: 155px;
+  border-radius: 5px;
+}
+
+.social__link:hover span {
+  padding: 18px 6px;
+  width: max-content;
 }
 
 .social__link:focus {
